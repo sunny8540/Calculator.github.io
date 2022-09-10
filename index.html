@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    color: aliceblue    ;
+    background-color: black;
+}
+.main{
+    margin-left: 24rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    width: 560px;
+    height: 600px;
+
+}
+p{
+    width: inherit;
+    background-color: #303030;
+    line-height: 20px;
+    color: aliceblue;
+
+}
+.answer {
+    width: 559px;
+    background-color: #303030;
+    height: 139px;
+    outline:none;
+    border: none;
+    text-align: right;
+    color: aliceblue;
+    font-size: 40px;
+
+}
+.layer1{
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    
+}
+.layer1 > input{
+    flex: 1;
+}
+.layer2{
+    width: inherit;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+
+
+}
+.layer2 > input{
+    flex: 1;
+}
+input{
+    color: white;
+    font-size:20px ;
+    outline: none;
+    border: 1px solid gray;
+
+}
+.number {
+    background-color: #101011;
+    
+}
+.oper{
+    background-color: #303030;
+}
+input:hover{
+    background-color: gray;
+    transition-duration: 100ms;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="main">
+        <form name="clacyi">
+            <p>calculator</p>
+            <input type="text" class="answer" name="answer">
+            <div class="layer2">
+                <input type="button" value="c" class="oper" onclick="clacyi.answer.value=''">
+                <input type="button" name="" class="oper"  value="=" onclick="clacyi.answer.value=eval(clacyi.answer.value)">
+            </div>
+            <div class="layer1">
+                <input type="button" name="" value="7" class="number" onclick="clacyi.answer.value += '7'">
+                <input type="button" name="" value="8"  class="number" onclick="clacyi.answer.value += '8'">
+                <input type="button" name="" value="9"  class="number" onclick="clacyi.answer.value += '9'">
+                <input type="button" name="" value="/" class="oper" onclick="clacyi.answer.value += '/'">
+            </div>
+            <div class="layer1">
+                <input type="button" name="" value="6" class="number" onclick="clacyi.answer.value += '6'">
+                <input type="button" name="" value="5"  class="number" onclick="clacyi.answer.value += '5'">
+                <input type="button" name="" value="4"class="number"  onclick="clacyi.answer.value += '4'">
+                <input type="button" name="" value="-" class="oper" onclick="clacyi.answer.value += '-'">
+            </div>
+            <div class="layer1">
+                <input type="button" name="" value="3" class="number" onclick="clacyi.answer.value += '3'">
+                <input type="button" name="" value="2" class="number"  onclick="clacyi.answer.value += '2'">
+                <input type="button" name="" value="1" class="number" onclick="clacyi.answer.value += '1'">
+                <input type="button" name="" value="+" class="oper" onclick="clacyi.answer.value += '+'">
+            </div>
+            <div class="layer1">
+                <input type="button" name="" value="." class="oper" onclick="clacyi.answer.value += '.'">
+                <input type="button" name="" value="0" class="number" onclick="clacyi.answer.value += '0'">
+                <input type="button" name="" value="%" class="oper" onclick="clacyi.answer.value += '%'">
+                <input type="button" name="" value="/" class="oper" onclick="clacyi.answer.value += '/'">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
